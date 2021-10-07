@@ -1,6 +1,7 @@
 import React from 'react'
 import './InputOptions.css'
 
+
 function InputOptions({Icon, title, color}) {
     return (
         <div className="inputOptions">
@@ -9,5 +10,6 @@ function InputOptions({Icon, title, color}) {
         </div>
     )
 }
+
 
 export default InputOptions
