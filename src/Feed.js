@@ -22,13 +22,8 @@ function Feed() {
     // Hook to fire off code when Feed runs
     // Pass empty [] as blank dependency to render only once
     useEffect(() => {
-<<<<<<< HEAD
         db.collection("posts").onSnapShot((snapshot) => {
             setPosts(snapshot.docs.map(doc => (
-=======
-        db.collection("posts").onSnapshot((snapshot) => {
-            setPosts(snapshot.docs.map((doc) => (
->>>>>>> login using redux initiated
                 {
                     id:doc.id,
                     data: doc.data(),
@@ -47,11 +42,8 @@ function Feed() {
             photoUrl: '',
             timestamp: firebase.firestore.FieldValue.serverTimestamp()
         })
-<<<<<<< HEAD
-=======
 
         setInput("")
->>>>>>> login using redux initiated
     }
 
     return (
@@ -61,11 +53,7 @@ function Feed() {
                     <form>
                     <CreateIcon />
                         <input value={input} onChange={e => setInput(e.target.value)} type="text" />
-<<<<<<< HEAD
-                        <button type="submit">Send</button>
-=======
                         <button onClick={sendPost} type="submit">Send</button>
->>>>>>> login using redux initiated
                     </form>
                 </div>
 
@@ -79,29 +67,15 @@ function Feed() {
 
             {/* Post */}
 
-<<<<<<< HEAD
-            {posts.map((post) => {
-                <Post />
-            })}
-
-            <Post 
-                name="James Jung"
-                description="This is a test"
-                message="This is working"
-            />
-=======
-            {posts.map(({ id, data: { name, description, message, photoUrl } }) => (
-                <Post 
-                    // Passing in key allows re-render to only render new added items
+            {posts.map(({ id, data: { name, description, message, photoUrl }}) => (
+                  <Post 
                     key={id}
                     name={name}
                     description={description}
                     message={message}
                     photoUrl={photoUrl}
-                />
+                  />
             ))}
->>>>>>> login using redux initiated
-
         </div>
     )
 }
