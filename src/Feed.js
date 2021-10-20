@@ -57,6 +57,7 @@ function Feed() {
                     </form>
                 </div>
 
+                
                 <div className="feed__inputOptions">
                     <InputOptions Icon={ImageIcon} title="Photo" color="#70B5F9" />
                     <InputOptions Icon={SubscriptionsIcon} title="Video" color="#E7A33E" />
